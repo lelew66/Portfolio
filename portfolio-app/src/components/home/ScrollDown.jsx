@@ -41,6 +41,8 @@ const ScrollDown = () => {
                 }}
                 ></path>
               </svg>
+              <span className="home_scroll-name">Scroll Down</span>
+              <img src="/icons/arrowdown.png" alt="arrown-dowm"  className='home__scroll-down'/>
         </a>
     </div>
   )
