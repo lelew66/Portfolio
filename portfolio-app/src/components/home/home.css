@@ -50,6 +50,7 @@
     font-size: var(--normal-font-size);
     font-family:var(  --body-font); 
     margin-bottom: var( --mb-0-25);
+    font-weight: var(--font-light);
 }
 .CV-link{
     font-size: var(--normal-font-size);

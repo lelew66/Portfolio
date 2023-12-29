@@ -10,7 +10,7 @@
   --button-hover-color:#8CC7AF;
   --text-color-1:#A84E4F;
   --text-color-2:#8CC7AF;
-  --body-font: "Roboto+Slab", sans-serif;
+  --body-font: "Roboto Slab", sans-serif;
   --header-font:"Raleway", sans-serif;
 
   --big-font-size: 3.5rem;
@@ -158,7 +158,7 @@ img {
 }
 
 .container {
-  max-width: 968px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
