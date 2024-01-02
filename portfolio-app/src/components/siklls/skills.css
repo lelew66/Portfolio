@@ -4,10 +4,11 @@
     margin-bottom: var(--mb-0-25);
 }
 .section_subtitle{
+    font-size: var(--smaller-font-size);
     text-align: center;
     display: block;
     margin-bottom: var(--mb-3);
-        font-weight: var(--font-light);
+    font-weight: var(--font-light);
 }
 .skills_container{
     grid-template-columns: repeat(2,50%);
