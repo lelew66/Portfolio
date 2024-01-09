@@ -35,7 +35,7 @@ const Quote = () => {
     })
 
   return (<section className="quotes  container section" id="quote">
-    <h2 className="section_titile">Today's Quote</h2>
+    <h2 className="section__titile">Today's Quote</h2>
       <span className="section_subtitle">Best wish to you </span>
     <Swiper className="quotes_container"
      autoHeight={true}

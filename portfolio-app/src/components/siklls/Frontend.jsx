@@ -4,7 +4,7 @@ import "./skills.css"
 const Frontend = () => {
   return (
     <div className="skills_content">
-        <h3 className="skills_title">Frontend developer</h3>
+        <h3 className="skills__title skills__title-mb ">Frontend developer</h3>
 
         <div className="skills_box">
             <div className="skills_group">
@@ -19,7 +19,7 @@ const Frontend = () => {
                 <div className="skills_data">
                 <i class='bx bx-badge-check' ></i>
                 <div>
-                    <h3 className="skills_name">CSS</h3>
+                    <h3 className=" skills_name">CSS</h3>
                         <span className="skills_level">Advanced</span>
                         
                 </div>

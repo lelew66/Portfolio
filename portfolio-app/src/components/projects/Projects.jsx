@@ -4,7 +4,7 @@ import Work1 from "../../assets/work1.jpg"
 const Projects = () => {
   return (
     <section className="projects section" id="projects">
-      <h2 className="section_titile">Projects</h2>
+      <h2 className="section__titile">Projects</h2>
       <span className="section_subtitle">My currently projects</span>
       <div className="projects_container container grid">
 

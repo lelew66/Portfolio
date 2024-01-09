@@ -124,6 +124,7 @@ img {
 .section__title {
   font-size: var(--h2-font-size);
   color: var(--title-color);
+  font-family: var(--header-font);
 }
 
 .section__subtitle {
@@ -136,6 +137,7 @@ img {
 .section__title,
 .section__subtitle {
   text-align: center;
+  font-family: var(--header-font);
 }
 
 .button {
