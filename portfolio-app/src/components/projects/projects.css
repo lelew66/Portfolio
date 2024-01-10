@@ -96,6 +96,10 @@ font-size: var(--small-font-size);
     font-family: var(--header-font);
     font-weight: var(--font-medium);
 }
+.btn:hover{
+    background-color: aliceblue;
+    border-radius: 5px;
+}
 
 @media screen and (max-width: 992px) {
     .projects_container{

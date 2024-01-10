@@ -1,6 +1,7 @@
 import React from "react";
 import "./projects.css";
 import Work1 from "../../assets/work1.jpg"
+import {motion} from "framer-motion";
 const Projects = () => {
   return (
     <section className="projects section" id="projects">
@@ -8,7 +9,7 @@ const Projects = () => {
       <span className="section_subtitle">My currently projects</span>
       <div className="projects_container container grid">
 
-        <div className="projects_content">
+        <motion.div className="projects_content">
           <div className="projects_images">
             <img src={Work1} alt="project images" className="project-image" />
           </div>
@@ -32,15 +33,16 @@ const Projects = () => {
               </span>
             </div>
             <div className="btn-box">
-            <input
+            <motion.input
               type="button"
               className="projects_view  btn"
               value="VIEW PROJECT"
+              whileHover={{ scale: 1.1 }}
             />
-            <input type="button" className="projects_code  btn" value="VIEW CODE" />
+            <motion.input type="button" className="projects_code  btn" value="VIEW CODE" whileHover={{ scale: 1.1 }}/>
           </div>
           </div>
-        </div><div className="projects_content">
+        </motion.div><div className="projects_content">
           <div className="projects_images">
             <img src={Work1} alt="project images" className="project-image" />
           </div>
@@ -64,12 +66,13 @@ const Projects = () => {
               </span>
             </div>
             <div className="btn-box">
-            <input
+            <motion.input
               type="button"
               className="projects_view  btn"
               value="VIEW PROJECT"
+              whileHover={{ scale: 1.1 }}
             />
-            <input type="button" className="projects_code  btn" value="VIEW CODE" />
+            <motion.input type="button" className="projects_code  btn" value="VIEW CODE" whileHover={{ scale: 1.1 }}/>
           </div>
           </div>
         </div>
@@ -97,12 +100,13 @@ const Projects = () => {
               </span>
             </div>
             <div className="btn-box">
-            <input
+            <motion.input
               type="button"
               className="projects_view  btn"
               value="VIEW PROJECT"
+              whileHover={{ scale: 1.1 }}
             />
-            <input type="button" className="projects_code  btn" value="VIEW CODE" />
+            <motion.input type="button" className="projects_code  btn" value="VIEW CODE" whileHover={{ scale: 1.1 }}/>
           </div>
           </div>
         </div>

@@ -120,6 +120,12 @@
     left:45%;
     background-color: white;
     font-family: var(--header-font);
+    padding: 5px;
+  
+}
+.contact__form-btn:hover{
+    background-color: aliceblue;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 992px) {
