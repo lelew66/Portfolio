@@ -6,6 +6,7 @@ import Skill from './components/siklls/Skill';
 import Projects from './components/projects/Projects';
 import Quote from './components/quote/Quote';
 import Contact  from './components/contact/Contact';
+import Footer  from './components/footer/Footer';
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
       <Projects />
       <Quote />
       <Contact />
+      <Footer />
       </main>
       
      
