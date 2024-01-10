@@ -7,6 +7,7 @@ import Projects from './components/projects/Projects';
 import Quote from './components/quote/Quote';
 import Contact  from './components/contact/Contact';
 import Footer  from './components/footer/Footer';
+import Scrollup  from './components/scrollup/Scrollup';
 function App() {
   return (
     <>
@@ -17,9 +18,9 @@ function App() {
       <Projects />
       <Quote />
       <Contact />
-      <Footer />
       </main>
-      
+      <Footer />
+      <Scrollup />
      
     </>
   );

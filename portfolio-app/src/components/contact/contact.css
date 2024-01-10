@@ -1,6 +1,7 @@
 .contact_section{
-    margin-top: 15%;
-}.contact_container {
+    margin-top: 10%;
+}
+.contact_container {
     grid-template-columns : 1fr 2.5fr;
     justify-content: center;
     column-gap:60px;

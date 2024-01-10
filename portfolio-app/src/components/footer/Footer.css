@@ -1,6 +1,8 @@
 .footer{
     background-color: white;
     border-top: 1px solid var(--body-color);
+    margin-top: 10%;
+    
 }
 .footer__container{
     padding: 2rem 0 6rem;
@@ -39,3 +41,25 @@ color: var(  --title-color);
     font-size: var(--tiny-font-size);
     margin-top: var(--mb-3);
 }
+
+@media screen and (max-width: 992px) {
+    .footer__container{
+        padding: 2rem 0 4rem;
+    }
+  }
+@media screen and (max-width: 768px) {
+    .footer__container{
+        padding: 2rem 0 2rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer__container{
+        padding: 1rem 0 1rem;
+    }
+}
+@media screen and (max-width: 350px) {
+    .footer__container{
+        padding:1rem 0 ;
+    }
+  }
