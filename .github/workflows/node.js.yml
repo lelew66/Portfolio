@@ -12,34 +12,28 @@ jobs:
 
     runs-on: self-hosted
 
-    # strategy:
-    #   matrix:
-    #     node-version: [14.x, 16.x, 18.x]
-    #     # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
     - uses: actions/checkout@v3
     - name: Set npm cache path
       run: npm config set cache /home/ubuntu/.npm
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Install dependencies
+      run: npm install
+    - name: Use Node.js
       uses: actions/setup-node@v3
       with:
         node-version: '14'
         cache: 'npm'
-        cache-dependency-path: portfolio-app/client/package-lock 
+        cache-dependency-path: portfolio-app/client/package-lock
     - run: |
-        cd portfolio-app
-        cd client
+        cd portfolio-app/client
         npm install
         npm run build
     - run: |
-        cd portfolio-app
-        cd server
+        cd portfolio-app/server
         npm install
-
-    - run : |
-        cd portfoil-app
-        cd server
+    - run: |
+        cd portfolio-app/server
         pm2 start App.js --name=server
+
         # - run: pm2 restart server
    
