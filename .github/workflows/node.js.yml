@@ -16,8 +16,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Check PATH
       run: echo $PATH
-    - name: Check Node.js version
-      run: node --version
+  
       
     - name: Set npm cache path
       run: npm config set cache /home/ubuntu/.npm
@@ -30,6 +29,8 @@ jobs:
         node-version: '14'
         cache: 'npm'
         cache-dependency-path: portfolio-app/client/package-lock.json
+    - name: Check Node.js version
+      run: node --version
     - run: |
         cd portfolio-app/client
         npm install
