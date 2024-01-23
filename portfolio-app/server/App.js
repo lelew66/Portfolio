@@ -2,11 +2,16 @@ const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
 const app = express();
-const port = 3001;
+const port = 5001;
+const path  = require('path');
+
+const _dirname = path.dirname(__filename);
+const buildPath = path.join(_dirname  , "../client/build");
 
 app.use(cors());
-
+app.use(express.static(buildPath));
 app.use(express.json());
+
 
 const ProjectData = [
   {
@@ -50,7 +55,7 @@ const ProjectData = [
 ];
 // Example endpoint
 app.get("/", (req, res) => {
-  res.status(200).send("Hello, Welcome to my API home page!");
+  res.sendFile(path.join(buildPath, "index.html"));
 });
 
 app.get("/API/Projects", (req, res) => {
@@ -149,6 +154,6 @@ app.delete("/delete", (req, res) => {
   });
   
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0',() => {
   console.log(`Server is running on http://localhost:${port}`);
 });
