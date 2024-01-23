@@ -30,17 +30,20 @@ jobs:
         cache-dependency-path: portfolio-app/client/package-lock.json
     - name: Check Node.js version
       run: node --version
+    - name: Check npm version
+      run: npm --version
     - name: Install dependencies
       run: |
         cd portfolio-app
         npm install 
     - run: |
+        cd portfolio-app/server
+        npm install
+    - run: |
         cd portfolio-app/client
         npm install
         npm run build
-    - run: |
-        cd portfolio-app/server
-        npm install
+
     - run: |
         cd portfolio-app/server
         pm2 start App.js --name=server
