@@ -17,11 +17,11 @@ jobs:
     - name: Check PATH
       run: echo $PATH
   
-      
+    - name: Install dependencies
+      run: npm install 
     - name: Set npm cache path
       run: npm config set cache /home/ubuntu/.npm
-    - name: Install dependencies
-      run: npm install
+
 
     - name: Use Node.js
       uses: actions/setup-node@v3
