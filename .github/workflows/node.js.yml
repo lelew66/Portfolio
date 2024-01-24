@@ -1,0 +1,52 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: self-hosted
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Check PATH
+      run: echo $PATH
+  
+
+    # - name: Set npm cache path
+    #   run: npm config set cache /home/ubuntu/.npm
+
+
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14'
+        cache: 'npm'
+        cache-dependency-path: portfolio-app/client/package-lock.json
+    - name: Check Node.js version
+      run: node --version
+    - name: Check npm version
+      run: npm --version
+    - name: Install dependencies
+      run: |
+        cd portfolio-app
+        npm install 
+    - run: |
+        cd portfolio-app/server
+        npm install
+    - run: |
+        cd portfolio-app/client
+        npm install
+        npm run build
+
+    - run: |
+        cd portfolio-app/server
+        pm2 start App.js --name=server
+
+        # - run: pm2 restart server
+   
