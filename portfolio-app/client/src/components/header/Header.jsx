@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import './header.css'
-
+import { Link } from 'react-router-dom';
 const Header = () => {
     
     window.addEventListener("scroll", function () {
@@ -44,6 +44,9 @@ const Header = () => {
                     <a href="#contact"  onClick={()=>setActiveNav("#contact")} className={activeNav==="#contact"?"nav_link active-link":"nav_link"}>
                     <img src="/icons/envelope.png" alt="nav icons" className="nav__icon" />
                     Contact</a>
+                </li>
+                <li className="nav__item">
+                    <Link  to="/api"  className ="nav_api">API</Link>
                 </li>
             </ul>
             <img src="/icons/cross.png" alt="nav icons" className="nav__close" onClick={()=>showMenu
